@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import "_variables";
 @mixin all($bg, $ft) {
   font-family: "Roboto", sans-serif;
   height: 100vw;
@@ -6,13 +7,38 @@
   background-color: $bg;
   color: $ft;
   margin: 0;
+  .hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    .hero-content {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 4rem;
+      font-size: 38px;
+      h1 {
+        font-size: 92px;
+      }
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      width: 60vw;
+      .hero-radio {
+        display: flex;
+        flex-direction: column;
+        input {
+          width: 5rem;
+        }
+      }
+    }
+  }
 }
 .light {
   @include all(white, black);
 }
 body {
   margin: 0;
-}
-html {
-  margin: 0;
+  margin-top: 0;
 }
