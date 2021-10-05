@@ -8,11 +8,19 @@ class TypingEffect extends React.Component {
     currentWord: this.props.words[0],
     currentType: "",
     deleting: false,
+    currentWordIndex: 0,
   };
   componentDidMount() {
     window.setInterval(() => {
       if (this.state.deleting && this.state.currentType === "") {
         this.setState({ deleting: false });
+        this.setState({
+          currentWordIndex: this.state.currentWordIndex === 0 ? 1 : 0,
+        });
+        this.setState({
+          currentWord: this.props.words[this.state.currentWordIndex],
+        });
+        console.log(this.state.currentWord);
       }
       if (
         this.state.currentType === this.state.currentWord &&
