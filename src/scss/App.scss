@@ -7,6 +7,30 @@
   background-color: $bg;
   color: $ft;
   margin: 0;
+
+  .description {
+    display: flex;
+    padding: 2.5rem;
+    color: $ft;
+    background: $bg;
+    justify-content: space-around;
+    width: 95vw;
+    .description-text {
+      text-align: center;
+    }
+    h1 {
+      font-size: 90px;
+    }
+    p {
+      font-size: 40px;
+    }
+    img {
+      width: 600px;
+    }
+  }
+  [dir="reverse"] {
+    flex-direction: row-reverse;
+  }
   .hero {
     height: 90vh;
     display: flex;
@@ -34,9 +58,16 @@
       }
     }
   }
+  .themechanger {
+    display: flex;
+    justify-content: center;
+  }
 }
 .light {
   @include all(white, black);
+}
+.dark {
+  @include all(black, white);
 }
 body {
   margin: 0;

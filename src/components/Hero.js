@@ -3,11 +3,10 @@
 
 //Import react essentials
 import React, { Component } from "react";
-
 //Import self made components
 import TypingEffect from "./TypingEffect";
 import logo from "../assets/toplogo.svg";
-
+import home1 from "../assets/home/1.png";
 // Setup class
 export default class Hero extends Component {
   // Constructor to get props
@@ -40,7 +39,7 @@ export default class Hero extends Component {
   state = {
     image: 0,
     homeImageList: [
-      "https://i.picsum.photos/id/264/1440/900.jpg?hmac=EOOVXZJpAE8AtwcMoo2LnZFqUF8Mch9zYJOl4J6Lgl0",
+      home1,
       "https://i.picsum.photos/id/180/1440/900.jpg?hmac=bOxux5-Kt4k0MEIfXOxnKnsxwNxJQQkWLt-TPqN4clI",
       "https://i.picsum.photos/id/842/1440/900.jpg?hmac=BV2uI4GP4T5K1KHbNKSx52HGRjOxbkKYrYz71ADbtuo",
     ],
@@ -60,10 +59,12 @@ export default class Hero extends Component {
   render() {
     return (
       <div
-        className="hero"
         style={{
-          background: `url(${this.state.homeImageList[this.state.image]})`,
+          background: `url(${
+            this.state.homeImageList[this.state.image]
+          }) 0% 0%/100% no-repeat`,
         }}
+        className="hero"
       >
         <div className="hero-content">
           <div className="hero-radio">
