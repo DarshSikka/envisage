@@ -7,6 +7,7 @@ import React, { Component } from "react";
 import TypingEffect from "./TypingEffect";
 import logo from "../assets/toplogo.svg";
 import home1 from "../assets/home/1.png";
+import home2 from "../assets/home/2.png";
 // Setup class
 export default class Hero extends Component {
   // Constructor to get props
@@ -40,7 +41,7 @@ export default class Hero extends Component {
     image: 0,
     homeImageList: [
       home1,
-      "https://i.picsum.photos/id/180/1440/900.jpg?hmac=bOxux5-Kt4k0MEIfXOxnKnsxwNxJQQkWLt-TPqN4clI",
+      home2,
       "https://i.picsum.photos/id/842/1440/900.jpg?hmac=BV2uI4GP4T5K1KHbNKSx52HGRjOxbkKYrYz71ADbtuo",
     ],
   };
