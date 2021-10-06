@@ -1,13 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import "_variables";
-@mixin all($bg, $ft) {
+@mixin all($bg, $ft, $vlink) {
   font-family: "Roboto", sans-serif;
   height: 100vw;
   width: 100%;
   background-color: $bg;
   color: $ft;
   margin: 0;
-
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    a:visited {
+      color: $vlink;
+    }
+    a {
+      color: $ft;
+      text-decoration: none;
+    }
+  }
   .description {
     display: flex;
     padding: 2.5rem;
@@ -62,12 +72,15 @@
     display: flex;
     justify-content: center;
   }
+  .nomatch {
+    text-align: center;
+  }
 }
 .light {
-  @include all(white, black);
+  @include all(white, black, purple);
 }
 .dark {
-  @include all(black, white);
+  @include all(black, white, whitesmoke);
 }
 body {
   margin: 0;
