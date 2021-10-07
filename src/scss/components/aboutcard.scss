@@ -1,12 +1,18 @@
+@import "../global.scss";
 .aboutus {
   margin-top: 120px;
-  //   background-color: green;
   display: flex;
   justify-content: space-evenly;
+  @include mobile {
+    flex-direction: column;
+    width: 100vw;
+  }
   .aboutcard {
-    // background-color: red;
-    // display: flex;
     width: 30%;
+    @include mobile {
+      width: 90%;
+      padding: 20px;
+    }
     .image {
       z-index: 4;
       background-color: #eeeeee;

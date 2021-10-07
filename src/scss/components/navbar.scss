@@ -1,14 +1,20 @@
+@import "../global.scss";
 @mixin navbar($bg, $ft, $vlink, $nav) {
   display: flex;
   justify-content: space-around;
   height: 70px;
   align-items: center;
+  width: 100vw;
   a:visited {
     color: $vlink;
   }
   a {
     color: $ft;
     text-decoration: none;
+    @include mobile {
+      display: none;
+      visibility: hidden;
+    }
   }
   font-size: 25px;
   font-weight: 600;
