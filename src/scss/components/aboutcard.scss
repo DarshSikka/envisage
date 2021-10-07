@@ -9,6 +9,7 @@
   }
   .aboutcard {
     width: 30%;
+    padding: 20px;
     @include mobile {
       width: 90%;
       padding: 20px;
@@ -35,6 +36,10 @@
       position: relative;
       top: -60px;
       min-height: 400px;
+      padding-bottom: 20px;
+      @include mobile {
+        min-height: 250px;
+      }
 
       .name {
         margin: auto;
