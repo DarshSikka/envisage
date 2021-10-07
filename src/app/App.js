@@ -5,6 +5,8 @@ import NoMatch from "../pages/404";
 import Themer from "../theme";
 import Home from "../pages/Home";
 import About from "../pages/About";
+import Pricing from "../pages/Pricing";
+
 function App() {
   const [currentTheme, setCurrentTheme] = useState(true);
   useEffect(() => {
@@ -22,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/pricing">
+            <Pricing />
           </Route>
           <Route path="*">
             <NoMatch />
