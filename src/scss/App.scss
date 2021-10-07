@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import "_variables";
-@mixin all($bg, $ft, $vlink) {
+@import "components/navbar";
+@mixin all($bg, $ft, $vlink, $nav) {
   font-family: "Roboto", sans-serif;
   height: 100vw;
   width: 100%;
@@ -8,15 +9,12 @@
   color: $ft;
   margin: 0;
   .navbar {
-    display: flex;
-    justify-content: space-around;
-    a:visited {
-      color: $vlink;
-    }
-    a {
-      color: $ft;
-      text-decoration: none;
-    }
+    @include navbar($bg, $ft, $vlink, $nav);
+  }
+  .navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   .description {
     display: flex;
@@ -77,10 +75,10 @@
   }
 }
 .light {
-  @include all(white, black, purple);
+  @include all(white, black, purple, grey);
 }
 .dark {
-  @include all(black, white, whitesmoke);
+  @include all(black, white, whitesmoke, navy);
 }
 body {
   margin: 0;
