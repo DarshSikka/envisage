@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoMatch from "../pages/404";
 import Themer from "../theme";
 import Home from "../pages/Home";
+import About from "../pages/About";
 function App() {
   const [currentTheme, setCurrentTheme] = useState(true);
   useEffect(() => {
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
           <Route path="*">
             <NoMatch />
