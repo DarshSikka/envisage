@@ -13,6 +13,7 @@ const Navbar = (props) => {
         <UpdateTheme />
       </div>
       <div className="links">
+        <a href="/">Home</a>
         <a href="/#features">Features</a>
         <a href="/pricing">Pricing</a>
         <a href="/about">About Us</a>

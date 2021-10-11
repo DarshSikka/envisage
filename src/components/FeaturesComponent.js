@@ -6,7 +6,7 @@ import Irrigation from "../assets/home/Irrigation.png";
 export default function FeaturesComponent(props) {
   return (
     <>
-      <div className="cards">
+      <div className="cards" id="features">
         <FeaturesCard
           title="Soil testing for water"
           description="Our product tests the field for water and irrigates it automatically, with no need for the farmer to even come!"

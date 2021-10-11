@@ -32,6 +32,10 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
+
+        <p style={{ textAlign: "center", paddingBottom: "0.5rem" }}>
+          Made with &lt;3 by exun
+        </p>
       </div>
     </Router>
   );
