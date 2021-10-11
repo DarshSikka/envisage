@@ -1,28 +1,39 @@
 @import "../global.scss";
 @mixin navbar($bg, $ft, $vlink, $nav) {
   display: flex;
-  justify-content: space-around;
-  height: 70px;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   a:visited {
     color: $vlink;
   }
   a {
-    color: $ft;
+    color: $vlink;
     text-decoration: none;
-    @include mobile {
-      display: none;
-      visibility: hidden;
-    }
   }
-  font-size: 25px;
+  font-size: 19px;
   font-weight: 600;
   background: $nav;
-  color: $ft;
+  color: $vlink;
   .links {
     display: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 45%;
+    @include mobile {
+      display: none;
+    }
+  }
+  .phone-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .phoneMenu {
+    display: none;
+  }
+  padding: 1rem 0rem;
+  @include mobile {
+    .phoneMenu {
+      display: block;
+    }
   }
 }

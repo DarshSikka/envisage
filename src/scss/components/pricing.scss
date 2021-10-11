@@ -1,43 +1,60 @@
 @import "../global.scss";
-.pricing {
-  margin-top: 120px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  @include mobile {
-    flex-direction: column;
-    font-weight: normal;
-    width: 100vw;
-  }
-  .pricingCard {
-    width: 35%;
-    height: auto;
-    background-color: #bbbbbb;
-    margin-bottom: 40px;
-    height: 200px;
-    border-radius: 10px;
-    padding: 10px;
+@mixin pricing($bg, $ft) {
+  .pricing {
+    button {
+      border: 0;
+    }
+    margin-top: 7rem;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     @include mobile {
-      width: 80vw;
-      margin: 10px;
+      flex-direction: column;
+      font-weight: normal;
+      width: 100vw;
     }
-    h3 {
-      text-align: center;
-      font-size: 30px;
-      margin: 10px;
-    }
-    .features {
-      margin: 5px;
+    .pricingCard {
+      background: $ft;
+      color: $bg;
+      * {
+        color: $bg;
+      }
+      padding: 3rem;
+      margin-bottom: 40px;
       border-radius: 10px;
-      padding: 10px;
-
-      .feature {
+      width: 35%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-bottom: 20px;
+      @include mobile {
+        width: 80vw;
+        margin: 10px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 30px;
+      }
+      .features {
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        .feature {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        align-items: flex-start;
+      }
+      .buy {
+        padding: 1rem;
+        width: 50%;
+        margin: auto;
         font-size: 20px;
-        line-height: 30px;
+        background: $bg;
+        margin-top: 40px;
+        color: $ft;
+        //dont hardcord dimensions for form elements
       }
     }
   }

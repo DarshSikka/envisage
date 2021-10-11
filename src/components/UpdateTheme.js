@@ -11,12 +11,13 @@ import Themer from "../theme";
 const UpdateTheme = () => {
   const [checked, setChecked] = useState("light");
   const handleChecked = (e) => {
-    setChecked(e.target.value === "true" ? "light" : "dark");
-    Themer.emit("themechange", e.target.value === "true" ? true : false);
+    setChecked(e === "true" ? "light" : "dark");
+    console.log(checked);
+    Themer.emit("themechange", e === "true" ? true : false);
   };
   return (
     <Fragment>
-      <div className="themechanger">
+      {/* <div className="themechanger">
         <label>Light</label>
         <input
           type="radio"
@@ -33,7 +34,13 @@ const UpdateTheme = () => {
           onChange={handleChecked}
           checked={checked === "dark" ? true : false}
         />
-      </div>
+      </div>*/}
+      <button
+        style={{ background: "transparent", border: "none", fontSize: 40 }}
+        onClick={() => handleChecked(checked === "light" ? "false" : "true")}
+      >
+        {checked === "light" ? "☀️" : "🌙"}
+      </button>
     </Fragment>
   );
 };

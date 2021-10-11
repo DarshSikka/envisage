@@ -4,10 +4,10 @@
 //Import react essentials
 import React, { Component } from "react";
 //Import self made components
-import TypingEffect from "./TypingEffect";
-import logo from "../assets/toplogo.svg";
+import logo from "../assets/home/Logo.png";
 import home1 from "../assets/home/1.png";
 import home2 from "../assets/home/2.png";
+import home3 from "../assets/home/3.png";
 // Setup class
 export default class Hero extends Component {
   // Constructor to get props
@@ -39,11 +39,7 @@ export default class Hero extends Component {
   // configure state, image index and list of images
   state = {
     image: 0,
-    homeImageList: [
-      home1,
-      home2,
-      "https://i.picsum.photos/id/842/1440/900.jpg?hmac=BV2uI4GP4T5K1KHbNKSx52HGRjOxbkKYrYz71ADbtuo",
-    ],
+    homeImageList: [home1, home2, home3],
   };
   // Minimal method to render radio input with methods defined earlier
   Radio({ id }) {
@@ -61,9 +57,8 @@ export default class Hero extends Component {
     return (
       <div
         style={{
-          background: `url(${
-            this.state.homeImageList[this.state.image]
-          }) 0% 0%/100% no-repeat`,
+          backgroundImage: `url(${this.state.homeImageList[this.state.image]})`,
+          backgroundSize: "100%",
         }}
         className="hero"
       >
@@ -75,12 +70,9 @@ export default class Hero extends Component {
           </div>
           <div className="hero-text">
             <h1>{this.props.title}</h1>
-            <TypingEffect
-              words={["abc", "bcd"]}
-              style={{ textAlign: "center" }}
-            />
+            <h4 style={{ textAlign: "center" }}>Help with your farm</h4>
           </div>
-          <img src={logo} />
+          <img src={logo} width="200" />
         </div>
       </div>
     );
